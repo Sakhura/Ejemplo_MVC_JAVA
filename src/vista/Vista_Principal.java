@@ -17,7 +17,7 @@ import java.awt.*;
  *
  * El Controlador sera quien decida que hacer cuando se presiona un boton.
  */
-public class VistaPrincipal extends JFrame {
+public class Vista_Principal extends JFrame {
 
     private final JTextField campoNombre = new JTextField(15);
     private final JTextField campoCarrera = new JTextField(15);
@@ -35,7 +35,7 @@ public class VistaPrincipal extends JFrame {
             };
     private final JTable tabla = new JTable(modeloTabla);
 
-    public VistaPrincipal() {
+    public Vista_Principal() {
         super("Gestion de Estudiantes - Ejemplo MVC");
         construirInterfaz();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

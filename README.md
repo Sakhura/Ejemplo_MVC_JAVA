@@ -1,11 +1,11 @@
 # Ejemplo MVC en Java - Gestion de Estudiantes
 
-Ejemplo didactico del patron **Modelo - Vista - Controlador (MVC)** usando Java + Swing.
-Es una pequena aplicacion CRUD: permite agregar estudiantes, verlos en una tabla y eliminarlos.
+Ejemplo didáctico del patron **Modelo - Vista - Controlador (MVC)** usando Java + Swing.
+Es una pequeña aplicación CRUD: permite agregar estudiantes, verlos en una tabla y eliminarlos.
 
 ## Que es MVC
 
-MVC separa una aplicacion en tres responsabilidades. La idea central: **cada capa tiene un solo
+MVC separa una aplicación en tres responsabilidades. La idea central: **cada capa tiene un solo
 trabajo y no se mete en el de las otras.**
 
 | Capa | Carpeta | Responsabilidad | Que NO hace |
@@ -55,18 +55,18 @@ java -cp bin App
 Si usas un IDE (IntelliJ, Eclipse, NetBeans, VS Code), basta con marcar `src/` como carpeta
 de fuentes y ejecutar `App.java`.
 
-## Por que enseniar asi
+## Por qué enseñar así
 
 - **Mantenibilidad:** si manana cambias la interfaz (de Swing a consola o web), el Modelo
   no se toca.
-- **Pruebas:** el Modelo se puede probar sin abrir la ventana (la logica esta aislada).
+- **Pruebas:** el Modelo se puede probar sin abrir la ventana (la lógica está aislada).
 - **Trabajo en equipo:** una persona puede trabajar la Vista y otra el Modelo en paralelo.
 
 ## Ejercicios sugeridos para los alumnos
 
-1. Agregar un boton "Editar" que modifique el estudiante seleccionado.
+1. Agregar un botón "Editar" que modifique el estudiante seleccionado.
 2. Mostrar al final de la tabla el **promedio general** del curso (nueva regla en el Modelo).
 3. Validar que no se repita el nombre del estudiante.
 4. Persistir los datos en un archivo de texto o CSV al cerrar la aplicacion.
 5. Reemplazar la Vista Swing por una Vista de consola **sin tocar el Modelo**, para
-   demostrar que la separacion funciona.# Ejemplo_MVC_JAVA
+   demostrar que la separación funciona.# Ejemplo_MVC_JAVA

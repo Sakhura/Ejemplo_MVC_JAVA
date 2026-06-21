@@ -1,8 +1,8 @@
 package controlador;
 
 import modelo.Estudiante;
-import modelo.ModeloEstudiantes;
-import vista.VistaPrincipal;
+import modelo.Modelo_Estudiante;
+import vista.Vista_Principal;
 
 import java.util.List;
 
@@ -20,10 +20,10 @@ import java.util.List;
  */
 public class Controlador {
 
-    private final ModeloEstudiantes modelo;
-    private final VistaPrincipal vista;
+    private final Modelo_Estudiante modelo;
+    private final Vista_Principal vista;
 
-    public Controlador(ModeloEstudiantes modelo, VistaPrincipal vista) {
+    public Controlador(Modelo_Estudiante modelo, Vista_Principal vista) {
         this.modelo = modelo;
         this.vista = vista;
 
@@ -40,17 +40,17 @@ public class Controlador {
     private void agregarEstudiante() {
         try {
             String nombre = vista.getNombre();
-            String carrera = vista.getCarrera();
-            // Convertir el texto a numero puede fallar: lo controlamos.
-            double promedio = Double.parseDouble(vista.getPromedio().replace(",", "."));
+            String apellido = vista.getApellido();
+            // Convertir el texto a número puede fallar: lo controlamos.
+            double nota = Double.parseDouble(vista.getNota().replace(",", "."));
 
-            modelo.agregar(nombre, carrera, promedio);
+            modelo.agregar(nombre, apellido, nota);
 
             refrescarTabla();
             vista.limpiarFormulario();
             vista.mostrarMensaje("Estudiante agregado correctamente.");
         } catch (NumberFormatException ex) {
-            vista.mostrarError("El promedio debe ser un numero (ej: 5.8).");
+            vista.mostrarError("La nota debe ser un numero (ej: 5.8).");
         } catch (IllegalArgumentException ex) {
             // Estas son las reglas de negocio que lanzo el Modelo.
             vista.mostrarError(ex.getMessage());
@@ -71,9 +71,9 @@ public class Controlador {
     /** Pide los datos al Modelo y le dice a la Vista que los pinte. */
     private void refrescarTabla() {
         vista.limpiarTabla();
-        List<Estudiante> lista = modelo.obtenerTodos();
+        List<Estudiante> lista = modelo.obtenerEstudiantes();
         for (Estudiante e : lista) {
-            vista.agregarFila(e.getId(), e.getNombre(), e.getCarrera(), e.getPromedio());
+            vista.agregarFila(e.getId(), e.getNombre(), e.getApellido(), e.getNotas());
         }
     }
 }

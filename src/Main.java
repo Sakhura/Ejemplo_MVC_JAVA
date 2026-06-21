@@ -1,6 +1,6 @@
 import controlador.Controlador;
 import modelo.Modelo_Estudiante;
-import vista.VistaPrincipal;
+import vista.Vista_Principal;
 
 import javax.swing.SwingUtilities;
 
@@ -17,11 +17,11 @@ import javax.swing.SwingUtilities;
 public class Main {
     public static void main(String[] args) {
         // SwingUtilities.invokeLater asegura que la interfaz se construya
-        // en el hilo correcto de Swing (buena practica).
+        // en el hilo correcto de Swing (buena práctica).
         SwingUtilities.invokeLater(() -> {
-            Modelo_Estudiante modelos = new Modelo_Estudiante();
-            VistaPrincipal vista = new VistaPrincipal();
-            new Controlador(modelos, vista);
+            Modelo_Estudiante modelo = new Modelo_Estudiante();
+            Vista_Principal vista = new Vista_Principal();
+            new Controlador(modelo, vista);
             vista.setVisible(true);
         });
     }
