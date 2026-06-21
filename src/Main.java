@@ -7,7 +7,7 @@ import javax.swing.SwingUtilities;
 /**
  * PUNTO DE ENTRADA de la aplicacion.
  *
- * Aqui se "arma" el patron MVC: se crean las tres piezas y se conectan.
+ * Aquí se "arma" el patron MVC: se crean las tres piezas y se conectan.
  * Fijarse en el orden:
  *  1. Se crea el Modelo (datos + logica).
  *  2. Se crea la Vista (interfaz).
