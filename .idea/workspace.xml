@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76e0ba0c-3383-4998-9b80-24004a7deb51" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Estudiante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/Modelo_Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Modelo_Estudiante.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vista/Vista_Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/Vista_Principal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

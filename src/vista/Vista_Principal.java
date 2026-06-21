@@ -20,14 +20,14 @@ import java.awt.*;
 public class Vista_Principal extends JFrame {
 
     private final JTextField campoNombre = new JTextField(15);
-    private final JTextField campoCarrera = new JTextField(15);
-    private final JTextField campoPromedio = new JTextField(5);
+    private final JTextField campoApellido = new JTextField(15);
+    private final JTextField campoNota = new JTextField(5);
 
     private final JButton botonAgregar = new JButton("Agregar");
     private final JButton botonEliminar = new JButton("Eliminar seleccionado");
 
     private final DefaultTableModel modeloTabla =
-            new DefaultTableModel(new String[]{"ID", "Nombre", "Carrera", "Promedio"}, 0) {
+            new DefaultTableModel(new String[]{"ID", "Nombre", "Apellido", "Nota"}, 0) {
                 @Override
                 public boolean isCellEditable(int fila, int columna) {
                     return false; // la tabla es solo de lectura
@@ -48,10 +48,10 @@ public class Vista_Principal extends JFrame {
         JPanel panelFormulario = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panelFormulario.add(new JLabel("Nombre:"));
         panelFormulario.add(campoNombre);
-        panelFormulario.add(new JLabel("Carrera:"));
-        panelFormulario.add(campoCarrera);
-        panelFormulario.add(new JLabel("Promedio:"));
-        panelFormulario.add(campoPromedio);
+        panelFormulario.add(new JLabel("Apellido:"));
+        panelFormulario.add(campoApellido);
+        panelFormulario.add(new JLabel("Nota:"));
+        panelFormulario.add(campoNota);
         panelFormulario.add(botonAgregar);
 
         // Panel inferior: boton eliminar
@@ -85,12 +85,12 @@ public class Vista_Principal extends JFrame {
         return campoNombre.getText();
     }
 
-    public String getCarrera() {
-        return campoCarrera.getText();
+    public String getApellido() {
+        return campoApellido.getText();
     }
 
-    public String getPromedio() {
-        return campoPromedio.getText();
+    public String getNota() {
+        return campoNota.getText();
     }
 
     /**
@@ -109,14 +109,14 @@ public class Vista_Principal extends JFrame {
 
     public void limpiarFormulario() {
         campoNombre.setText("");
-        campoCarrera.setText("");
-        campoPromedio.setText("");
+        campoApellido.setText("");
+        campoNota.setText("");
         campoNombre.requestFocus();
     }
 
-    /** Borra la tabla y la vuelve a llenar fila por fila. */
-    public void agregarFila(int id, String nombre, String carrera, double promedio) {
-        modeloTabla.addRow(new Object[]{id, nombre, carrera, promedio});
+    /** Agrega una fila a la tabla. */
+    public void agregarFila(int id, String nombre, String apellido, double nota) {
+        modeloTabla.addRow(new Object[]{id, nombre, apellido, nota});
     }
 
     public void limpiarTabla() {
